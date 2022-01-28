@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-links,
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
+
+.navbar-links,
+li {
+  list-style-type: none;
+}
+
+.navbar-links,
+li,
+a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* .header {
+  display: flex;
+  background-color: antiquewhite;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.logoSearch {
+  display: flex;
+}
+
+.img {
+  height: 30px;
+  width: 80px;
+}
+
+.CartSignOut {
+  display: flex;
+}
+
+.signOut-btn {
+  border: none;
+  border-radius: 15%;
+  height: 100%;
+  width: 70%;
+  background-color: aqua;
+}
+
+.bag-btn {
+  border: none;
+  border-radius: 15%;
+  height: 100%;
+  width: 70%;
+  background-color: aqua;
+} */
