@@ -18,7 +18,6 @@ function App() {
         <Route path='/SignUp' />
         <Route path='/Cart' />
       </Switch> */}
-      <h1>Hello World</h1>
     </div>
   );
 }
