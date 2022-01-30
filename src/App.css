@@ -103,3 +103,35 @@ li:hover {
     display: flex;
   } */
 }
+
+/* Product component */
+
+.product-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.product-card {
+  margin: 1px;
+  height: 240px;
+  border: blue solid;
+  width: 180px;
+}
+
+.card-img {
+  height: 70%;
+  width: 100%;
+}
+
+.price {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+}
+
+.add-to-cart {
+  display: flex;
+  margin: auto;
+}
