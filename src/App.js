@@ -10,9 +10,9 @@ function App() {
   return (
     <div>
       <Header />
-      <Products />
+      {/* <Products /> */}
       {/* <SignUp /> */}
-      {/* <Cart /> */}
+      <Cart />
       {/* <Switch>
         <Route path='/Products' />
         <Route path='/SignUp' />
