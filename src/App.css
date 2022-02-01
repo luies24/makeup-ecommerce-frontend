@@ -151,3 +151,42 @@ li:hover {
   color: white;
   border: none;
 }
+
+/* Cart component  */
+
+.cart-main {
+  height: 90vh;
+  border: 2px #800080 solid;
+  padding: 20px;
+}
+
+.cart-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.item-section {
+  border: 2px purple solid;
+  display: flex;
+}
+
+.cart-img {
+  height: 5%;
+  width: 10%;
+}
+
+.checkout-cs-btn {
+  display: flex;
+  float: right;
+  width: 50%;
+  /* display: block; */
+}
+
+.cart-btn {
+  border: #fe7dcf solid 2px;
+  background-color: white;
+  height: 40px;
+  width: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
