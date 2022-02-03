@@ -6,15 +6,17 @@ import SignUp from './Components/SignUp'
 import Products from './Components/Products'
 import Cart from './Components/Cart'
 import ProductDetails from './Components/ProductDetails'
+import Checkout from './Components/Checkout'
 
 function App() {
   return (
     <div>
       <Header />
       {/* <Products /> */}
-      <ProductDetails />
+      {/* <ProductDetails /> */}
       {/* <SignUp /> */}
       {/* <Cart /> */}
+      <Checkout />
       {/* <Switch>
         <Route path='/Products' />
         <Route path='/SignUp' />
