@@ -1,15 +1,30 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Card(){
+const Card = props => {
+
+    const handleClick = () => {
+        props.showProduct(props.product)
+    }
+
+    const handleCartClick = (event) => {
+        event.stopPropagation();
+        props.cartList(props.product)
+    }
+
     return(
-        <div className='product-card'>
+        <div className='product-card' onClick={handleClick}>
+            <Link className='Product-link' to='/ProductDetails'>
                 <img 
-                    className='card-img'
-                    src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1-index-best-makeup-products-1614372277.jpg?crop=0.478xw:0.955xh;0.266xw,0.0256xh&resize=640:*'
-                    alt='Makeup Product'    
-                />
-                <h3 className='price'>$20.00</h3>
-                <button className='add-to-cart'>Add to Cart</button>
-            </div>
+                        className='card-img'
+                        src={props.product.image}
+                        alt='Makeup Product'    
+                    />
+                    <h3 className='price'>${props.product.price}0</h3>
+                    <button className='add-to-cart' onClick={handleCartClick}>Add to Cart</button>
+            </Link>
+        </div>
     )
 }
+
+export default Card;
