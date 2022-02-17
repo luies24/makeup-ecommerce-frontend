@@ -26,20 +26,29 @@ class App extends React.Component {
     fetch('http://localhost:3000/middleman')
       .then(response => response.json())
       .then(inventory => {
-        for(let i = 0; i < 8; i++){
+        for(let i = 8; i < 16; i++){
           this.setState({inventory: [...this.state.inventory, inventory[i]]})
         }
       })
   }
+
+  displayProductDetails = (product) => {
+    this.setState({selectedProduct: product})
+  }
   
   render() {
+
+    const { inventory } = this.state
+    const { selectedProduct } = this.state
+    const { cart } = this.state
+
     return (
       <div>
         <Header />
         <Switch>
-            <Route path='/' render={props => <Products {...props} inventory={this.state.inventory} />} />
-            <Route path='/Card' render={props => <Card {...props} inventory={this.state.inventory} />} />
-            <Route path='/ProductDetails' render={props => <ProductDetails />} />
+            <Route path='/Products' render={props => <Products {...props} inventory={inventory} displayProductDetails={this.displayProductDetails} />} />
+            <Route path='/Card' render={props => <Card {...props} inventory={inventory} />} />
+            <Route path='/ProductDetails' render={props => <ProductDetails {...props} product={selectedProduct} />} />
             <Route path='/SignUp' render={props => <SignUp />} />
             <Route path='/Cart' render={props => <Cart />} />
             <Route path='/Checkout' render={props => <Checkout />} />
