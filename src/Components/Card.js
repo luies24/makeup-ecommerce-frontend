@@ -17,7 +17,7 @@ const Card = props => {
             <Link className='Product-link' to='/ProductDetails'>
                 <img 
                         className='card-img'
-                        src={props.product.image}
+                        src={props.product.image_link}
                         alt='Makeup Product'    
                     />
                     <h3 className='price'>${props.product.price}0</h3>

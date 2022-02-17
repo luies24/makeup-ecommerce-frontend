@@ -1,9 +1,17 @@
 import React from 'react'
+import Card from './Card'
 
-export default function Products(){
+export default function Products({inventory}){
     return(
         <div className='product-main'>
-            
+            {inventory.map(product =>
+                <Card
+                    key={product.id}
+                    product={product}
+                    // showProduct={showProduct}
+                    // cartList={cartList}
+                />
+            )}
         </div>
     )
 }
