@@ -20,7 +20,7 @@ const Card = props => {
                     src={props.product.image_link}
                     alt='Makeup Product'    
                 />
-                <h3 className='price'>{props.product.price}</h3>
+                <h3 className='price'>${props.product.price}0</h3>
                 <button className='add-to-cart' onClick={handleCartClick}>Add to Cart</button>
             </Link>
         </div>

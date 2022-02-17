@@ -32,8 +32,17 @@ class App extends React.Component {
       })
   }
 
+  //Grabs product that was clicked on and pass it into this function
+  //This function then saves that product into an array called 'selectedProduct'
+  //Then it is passed to 'productDetails' component to render the information on the product the user clicked on.
   displayProductDetails = (product) => {
     this.setState({selectedProduct: product})
+  }
+
+  //When user clicks on add to cart, It passes that product into this function.
+  //Which then adds it to the end of the 'cart' array.
+  cartList = (product) => {
+    this.setState({cart: [...this.state.cart, product]})
   }
   
   render() {
@@ -46,11 +55,19 @@ class App extends React.Component {
       <div>
         <Header />
         <Switch>
-            <Route path='/Products' render={props => <Products {...props} inventory={inventory} displayProductDetails={this.displayProductDetails} />} />
+            <Route 
+              path='/Products' 
+              render={props => <Products {...props} 
+                inventory={inventory} 
+                displayProductDetails={this.displayProductDetails} 
+                cartList={this.cartList} 
+              />} 
+            />
+            {/* Don't think I need Cart route here */}
             <Route path='/Card' render={props => <Card {...props} inventory={inventory} />} />
-            <Route path='/ProductDetails' render={props => <ProductDetails {...props} product={selectedProduct} />} />
+            <Route path='/ProductDetails' render={props => <ProductDetails {...props} product={selectedProduct} cartList={this.cartList} />} />
             <Route path='/SignUp' render={props => <SignUp />} />
-            <Route path='/Cart' render={props => <Cart />} />
+            <Route path='/Cart' render={props => <Cart {...props} cart={cart} />} />
             <Route path='/Checkout' render={props => <Checkout />} />
         </Switch>
       </div>
