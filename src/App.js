@@ -63,9 +63,14 @@ class App extends React.Component {
                 cartList={this.cartList} 
               />} 
             />
-            {/* Don't think I need Cart route here */}
+            {/* Don't think I need Card route here */}
             <Route path='/Card' render={props => <Card {...props} inventory={inventory} />} />
-            <Route path='/ProductDetails' render={props => <ProductDetails {...props} product={selectedProduct} cartList={this.cartList} />} />
+            <Route 
+              path='/ProductDetails' 
+              render={props => <ProductDetails {...props} 
+              product={selectedProduct} 
+              cartList={this.cartList} />} 
+            />
             <Route path='/SignUp' render={props => <SignUp />} />
             <Route path='/Cart' render={props => <Cart {...props} cart={cart} />} />
             <Route path='/Checkout' render={props => <Checkout />} />

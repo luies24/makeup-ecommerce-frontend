@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
 
@@ -25,9 +26,9 @@ export default function Header(){
             </a>
             <div className='navbar-links'>
                     <ul className='ul-links'>
-                        <li><a href="localhost:3000">Home</a></li>
-                        <li><a href="localhost:3000">About</a></li>
-                        <li><a href="localhost:3000">Contact</a></li>
+                        <li><Link to="/Products">Products</Link></li>
+                        <li><Link to="/Cart">Cart</Link></li>
+                        <li><Link to="/SignUp">Sign In</Link></li>
                     </ul>
             </div>
         </div>
