@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CartItem from './CartItem'
 
 export default function Cart({ cart }){
+
     return(
         <div className='cart-main'>
                 <h1 className='cart-heading'>Your Cart</h1>
@@ -22,7 +24,9 @@ export default function Cart({ cart }){
                 )}
             </div>
             <div className='checkout-cs-btn'>
-                <button className='cart-btn'>Continue Shopping</button>
+                <Link to='/Products' className='cart-btn'>
+                    Continue Shopping
+                </Link>
                 <button className='cart-btn'>Check Out</button>
             </div>
         </div>
