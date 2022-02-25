@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem'
 
-export default function Cart({ cart }){
+export default function Cart({ cart, removeCartItem }){
 
     return(
         <div className='cart-main'>
@@ -20,6 +20,7 @@ export default function Cart({ cart }){
                     <CartItem
                         key={product.id}
                         product={product}
+                        removeCartItem={removeCartItem}
                     />
                 )}
             </div>

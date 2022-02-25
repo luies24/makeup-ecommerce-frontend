@@ -2,8 +2,9 @@ import React from 'react'
 
 const CartItem = props => {
 
-    const handleClick = () => {
-        
+    const handleClick = (event) => {
+        event.stopPropagation()
+        props.removeCartItem(props.product)
     }
 
     return(

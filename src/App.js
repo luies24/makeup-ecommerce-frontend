@@ -44,6 +44,12 @@ class App extends React.Component {
   cartList = (product) => {
     this.setState({cart: [...this.state.cart, product]})
   }
+
+  removeCartItem = (product) => {
+    const newCart = this.state.cart.filter(items => items !== product)
+    this.setState({ cart: newCart })
+  }
+
   
   render() {
 
@@ -72,7 +78,10 @@ class App extends React.Component {
               cartList={this.cartList} />} 
             />
             <Route path='/SignUp' render={props => <SignUp />} />
-            <Route path='/Cart' render={props => <Cart {...props} cart={cart} />} />
+            <Route path='/Cart' render={props => <Cart {...props} 
+              cart={cart} 
+              removeCartItem={this.removeCartItem} />} 
+            />
             <Route path='/Checkout' render={props => <Checkout />} />
         </Switch>
       </div>
