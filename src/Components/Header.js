@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BsFillCartFill } from 'react-icons/bs'
 
-export default function Header(){
+export default function Header({ cartLength }){
 
     const [show, setShow] = useState(false)
 
@@ -9,7 +10,6 @@ export default function Header(){
         e.preventDefault()
 
         setShow(!show)
-        console.log(show)
         //return list items here?
     } 
 
@@ -27,7 +27,14 @@ export default function Header(){
             <div className='navbar-links'>
                     <ul className='ul-links'>
                         <li><Link to="/Products">Products</Link></li>
-                        <li><Link to="/Cart">Cart</Link></li>
+                        <li>
+                            <Link to="/Cart" className='cartBtn'>
+                                <BsFillCartFill size='2em' />
+                                <div className='cartLength'>
+                                    {cartLength}
+                                </div>
+                            </Link>
+                        </li>
                         <li><Link to="/SignUp">Sign In</Link></li>
                     </ul>
             </div>

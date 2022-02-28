@@ -47,6 +47,19 @@ li:hover {
   background-color: #8465d6;
 }
 
+.cartBtn {
+  display: flex;
+  position: relative;
+}
+
+.cartLength {
+  color: black;
+  font-size: 20px;
+  padding-left: 13px;
+  padding-top: 4px;
+  position: absolute;
+}
+
 /* Hamburger toggle */
 
 .toggle-button {
@@ -156,8 +169,7 @@ li:hover {
 /* Cart component  */
 
 .cart-main {
-  height: 90vh;
-  border: 2px #800080 solid;
+  height: 100vh;
   padding: 20px;
 }
 
@@ -181,7 +193,7 @@ li:hover {
 
 .item-section {
   border-top: #fe7dcf solid 2px;
-  border-bottom: #fe7dcf solid 2px;
+  /* border-bottom: #fe7dcf solid 2px; */
   display: flex;
   justify-content: space-between;
 }
@@ -191,8 +203,10 @@ li:hover {
 }
 
 .cart-img {
-  height: 100%;
-  width: 20%;
+  height: 140px;
+  width: 140px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .product-info {
@@ -222,6 +236,7 @@ li:hover {
 .cart-btn {
   border: #fe7dcf solid 2px;
   background-color: white;
+  color: black;
   height: 40px;
   width: 50%;
   margin-right: 10px;
@@ -231,8 +246,8 @@ li:hover {
 .remove-btn {
   border: #fe7dcf solid 2px;
   background-color: white;
-  height: 35px;
-  width: 60%;
+  height: 40px;
+  width: 230px;
 }
 
 .product-name {

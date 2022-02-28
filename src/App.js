@@ -43,6 +43,7 @@ class App extends React.Component {
   //Which then adds it to the end of the 'cart' array.
   cartList = (product) => {
     this.setState({cart: [...this.state.cart, product]})
+    console.log(this.state.cart.length)
   }
 
   removeCartItem = (product) => {
@@ -59,7 +60,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Header />
+        <Header cartLength={cart.length}/>
         <Switch>
             <Route 
               path='/Products' 

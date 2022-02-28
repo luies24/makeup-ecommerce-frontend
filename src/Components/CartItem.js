@@ -8,7 +8,7 @@ const CartItem = props => {
     }
 
     return(
-        <>
+        <div className='item-section'>
             <div className='cart-img-name-remove'>
                 <img 
                     className='cart-img'
@@ -27,7 +27,7 @@ const CartItem = props => {
                 <h3>Quantity</h3>
                 <h3>$20.00</h3>
             </div>
-        </>
+        </div>
     )
 }
 

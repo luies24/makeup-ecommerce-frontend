@@ -15,7 +15,7 @@ export default function Cart({ cart, removeCartItem }){
                         <h3>Total</h3>
                     </div>
                 </div>
-            <div className='item-section'>
+            <div className='item-section-outer'>
                 {cart.map(product => 
                     <CartItem
                         key={product.id}
