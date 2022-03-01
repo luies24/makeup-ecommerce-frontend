@@ -12,6 +12,7 @@ import Cart from './Components/Cart'
 import ProductDetails from './Components/ProductDetails'
 import Checkout from './Components/Checkout'
 import Card from './Components/Card'
+import Footer from './Components/Footer'
 
 class App extends React.Component {
 
@@ -85,6 +86,7 @@ class App extends React.Component {
             />
             <Route path='/Checkout' render={props => <Checkout />} />
         </Switch>
+        <Footer/>
       </div>
     );
   }

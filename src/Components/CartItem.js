@@ -24,7 +24,7 @@ const CartItem = props => {
             </div>
             <div className='price-qty-total'>
                 <h3 className='price'>${props.product.price}0</h3>
-                <h3>Quantity</h3>
+                <h3>1</h3>
                 <h3>$20.00</h3>
             </div>
         </div>

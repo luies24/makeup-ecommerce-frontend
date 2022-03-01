@@ -226,7 +226,7 @@ li:hover {
 }
 
 .price-qty-total {
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -241,6 +241,12 @@ li:hover {
   width: 50%;
   margin-right: 10px;
   margin-top: 10px;
+  font-size: 16px;
+  font-family: "Times New Roman";
+}
+
+#cart-shopping {
+  padding-left: 100px;
 }
 
 .remove-btn {
@@ -284,4 +290,18 @@ li:hover {
   width: 35%;
   margin-right: 10px;
   margin-top: 30px;
+}
+
+/* Footer styling */
+.footer-div {
+  background-color: #fe7dcf;
+  height: 121px;
+  margin-top: 50px;
+}
+
+.footer-h1 {
+  display: flex;
+  color: white;
+  padding-top: 50px;
+  justify-content: center;
 }

@@ -25,7 +25,7 @@ export default function Cart({ cart, removeCartItem }){
                 )}
             </div>
             <div className='checkout-cs-btn'>
-                <Link to='/Products' className='cart-btn'>
+                <Link to='/Products' className='cart-btn' id='cart-shopping'>
                     Continue Shopping
                 </Link>
                 <button className='cart-btn'>Check Out</button>
